@@ -1,32 +1,34 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "InformationEvent"
-- "InformationVenue"
-- "InformationTabOLD"
+- "GeneralInfo"
+- "MoreInfo"
+- "PlaceInformation"
+- "selectedTabIndex"
+- "tableSection"
 - "selectedInformationTab"
-- "section"
 - "testEnum"
 provides-nominal:
-- "O8EnumTest16InformationEvent"
-- "O8EnumTest16InformationVenue"
-- "O8EnumTest17InformationTabOLD"
+- "O8EnumTest11GeneralInfo"
+- "O8EnumTest8MoreInfo"
+- "O8EnumTest16PlaceInformation"
 provides-member:
-- ["O8EnumTest16InformationEvent", ""]
-- ["O8EnumTest16InformationVenue", ""]
-- ["O8EnumTest17InformationTabOLD", ""]
+- ["O8EnumTest11GeneralInfo", ""]
+- ["O8EnumTest8MoreInfo", ""]
+- ["O8EnumTest16PlaceInformation", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "FloatLiteralType"
-- "InformationVenue"
-- "section"
-- "InformationEvent"
 - "testEnum"
-- !private "~="
-- "selectedInformationTab"
+- "PlaceInformation"
+- "tableSection"
+- "FloatLiteralType"
 - "=="
-- "IntegerLiteralType"
-- "InformationTabOLD"
+- !private "~="
 - "Int"
+- "IntegerLiteralType"
+- "selectedInformationTab"
+- "MoreInfo"
+- "GeneralInfo"
+- "selectedTabIndex"
 depends-member:
 - !private ["Ps22BidirectionalIndexType", "Distance"]
 - !private ["Ps22BidirectionalIndexType", "IntegerLiteralType"]
@@ -49,16 +51,16 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["Ps23CustomStringConvertible", "hashValue"]
 - !private ["Sd", "deinit"]
-- ["Ps9Equatable", "About"]
-- ["Ps9Equatable", "Agenda"]
+- ["Ps9Equatable", "CurrentWheather"]
+- ["Ps9Equatable", "Description"]
 - !private ["Ps9Equatable", "Distance"]
-- ["Ps9Equatable", "Documents"]
-- ["Ps9Equatable", "Event"]
+- ["Ps9Equatable", "General"]
+- ["Ps9Equatable", "Hotel"]
+- ["Ps9Equatable", "HowToGoHere"]
 - !private ["Ps9Equatable", "IntegerLiteralType"]
-- ["Ps9Equatable", "Navigate"]
+- ["Ps9Equatable", "InterestingPlacesNearby"]
+- ["Ps9Equatable", "More"]
 - ["Ps9Equatable", "RawValue"]
-- ["Ps9Equatable", "Venue"]
-- ["Ps9Equatable", "Wifi"]
 - !private ["Ps9Equatable", "_getBuiltinLogicValue"]
 - ["Ps9Equatable", "hashValue"]
 - ["Ps9Equatable", "init"]
@@ -67,40 +69,29 @@ depends-member:
 - !private ["Ps16ForwardIndexType", "Distance"]
 - !private ["Ps16ForwardIndexType", "IntegerLiteralType"]
 - !private ["Ps16ForwardIndexType", "hashValue"]
-- ["Ps8Hashable", "About"]
-- ["Ps8Hashable", "Agenda"]
+- ["O8EnumTest11GeneralInfo", "Description"]
+- ["O8EnumTest11GeneralInfo", "Hotel"]
+- ["O8EnumTest11GeneralInfo", "HowToGoHere"]
+- ["O8EnumTest11GeneralInfo", "RawValue"]
+- ["O8EnumTest11GeneralInfo", "deinit"]
+- ["O8EnumTest11GeneralInfo", "hashValue"]
+- ["O8EnumTest11GeneralInfo", "init"]
+- ["O8EnumTest11GeneralInfo", "rawValue"]
+- ["Ps8Hashable", "CurrentWheather"]
+- ["Ps8Hashable", "Description"]
 - !private ["Ps8Hashable", "Distance"]
-- ["Ps8Hashable", "Documents"]
-- ["Ps8Hashable", "Event"]
+- ["Ps8Hashable", "General"]
+- ["Ps8Hashable", "Hotel"]
+- ["Ps8Hashable", "HowToGoHere"]
 - !private ["Ps8Hashable", "IntegerLiteralType"]
-- ["Ps8Hashable", "Navigate"]
+- ["Ps8Hashable", "InterestingPlacesNearby"]
+- ["Ps8Hashable", "More"]
 - ["Ps8Hashable", "RawValue"]
-- ["Ps8Hashable", "Venue"]
-- ["Ps8Hashable", "Wifi"]
 - !private ["Ps8Hashable", "_getBuiltinLogicValue"]
 - ["Ps8Hashable", "hashValue"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "rawValue"]
 - ["Ps8Hashable", ""]
-- ["O8EnumTest16InformationEvent", "About"]
-- ["O8EnumTest16InformationEvent", "Agenda"]
-- ["O8EnumTest16InformationEvent", "RawValue"]
-- ["O8EnumTest16InformationEvent", "deinit"]
-- ["O8EnumTest16InformationEvent", "hashValue"]
-- ["O8EnumTest16InformationEvent", "init"]
-- ["O8EnumTest16InformationEvent", "rawValue"]
-- ["O8EnumTest17InformationTabOLD", "Documents"]
-- ["O8EnumTest17InformationTabOLD", "Event"]
-- ["O8EnumTest17InformationTabOLD", "Venue"]
-- ["O8EnumTest17InformationTabOLD", "deinit"]
-- ["O8EnumTest17InformationTabOLD", "hashValue"]
-- ["O8EnumTest16InformationVenue", "Navigate"]
-- ["O8EnumTest16InformationVenue", "RawValue"]
-- ["O8EnumTest16InformationVenue", "Wifi"]
-- ["O8EnumTest16InformationVenue", "deinit"]
-- ["O8EnumTest16InformationVenue", "hashValue"]
-- ["O8EnumTest16InformationVenue", "init"]
-- ["O8EnumTest16InformationVenue", "rawValue"]
 - !private ["Si", "Distance"]
 - !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "deinit"]
@@ -117,20 +108,37 @@ depends-member:
 - !private ["Ps14MirrorPathType", "Distance"]
 - !private ["Ps14MirrorPathType", "IntegerLiteralType"]
 - !private ["Ps14MirrorPathType", "hashValue"]
+- ["O8EnumTest8MoreInfo", "CurrentWheather"]
+- ["O8EnumTest8MoreInfo", "InterestingPlacesNearby"]
+- ["O8EnumTest8MoreInfo", "RawValue"]
+- ["O8EnumTest8MoreInfo", "deinit"]
+- ["O8EnumTest8MoreInfo", "hashValue"]
+- ["O8EnumTest8MoreInfo", "init"]
+- ["O8EnumTest8MoreInfo", "rawValue"]
 - !private ["CSo8NSNumber", "deinit"]
 - !private ["CSo8NSObject", "deinit"]
 - !private ["CSo7NSValue", "deinit"]
 - ["Ps21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]
+- ["O8EnumTest16PlaceInformation", "General"]
+- ["O8EnumTest16PlaceInformation", "More"]
+- ["O8EnumTest16PlaceInformation", "RawValue"]
+- ["O8EnumTest16PlaceInformation", "deinit"]
+- ["O8EnumTest16PlaceInformation", "hashValue"]
+- ["O8EnumTest16PlaceInformation", "init"]
+- ["O8EnumTest16PlaceInformation", "rawValue"]
 - !private ["Ps21RandomAccessIndexType", "Distance"]
 - !private ["Ps21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["Ps21RandomAccessIndexType", "hashValue"]
 - !private ["Vs5Range", "deinit"]
-- ["Ps16RawRepresentable", "About"]
-- ["Ps16RawRepresentable", "Agenda"]
-- ["Ps16RawRepresentable", "Navigate"]
+- ["Ps16RawRepresentable", "CurrentWheather"]
+- ["Ps16RawRepresentable", "Description"]
+- ["Ps16RawRepresentable", "General"]
+- ["Ps16RawRepresentable", "Hotel"]
+- ["Ps16RawRepresentable", "HowToGoHere"]
+- ["Ps16RawRepresentable", "InterestingPlacesNearby"]
+- ["Ps16RawRepresentable", "More"]
 - ["Ps16RawRepresentable", "RawValue"]
-- ["Ps16RawRepresentable", "Wifi"]
 - ["Ps16RawRepresentable", "hashValue"]
 - ["Ps16RawRepresentable", "init"]
 - ["Ps16RawRepresentable", "rawValue"]
@@ -186,20 +194,20 @@ depends-nominal:
 - !private "Sd"
 - "Ps9Equatable"
 - !private "Ps16ForwardIndexType"
+- "O8EnumTest11GeneralInfo"
 - "Ps8Hashable"
-- "O8EnumTest16InformationEvent"
-- "O8EnumTest17InformationTabOLD"
-- "O8EnumTest16InformationVenue"
 - !private "Si"
 - !private "Ps21IntegerArithmeticType"
 - !private "Ps25IntegerLiteralConvertible"
 - !private "Ps11IntegerType"
 - !private "Ps14MirrorPathType"
+- "O8EnumTest8MoreInfo"
 - !private "CSo8NSNumber"
 - !private "CSo8NSObject"
 - !private "CSo7NSValue"
 - "Ps21NilLiteralConvertible"
 - "Sq"
+- "O8EnumTest16PlaceInformation"
 - !private "Ps21RandomAccessIndexType"
 - !private "Vs5Range"
 - "Ps16RawRepresentable"
@@ -226,4 +234,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "5ec9f6d1359d3df719ffd919c621b28f"
+interface-hash: "0e61ebb608072a5938458dcbd332e732"

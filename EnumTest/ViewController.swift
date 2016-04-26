@@ -37,11 +37,11 @@ func testEnum() {
         
         switch informationCellType {
         case .Description:
-            break
+            print("desription")
         case .HowToGoHere:
-            break
+            print("How to go here")
         case .Hotel:
-            break
+            print("Hotel")
         }
         
     case .More:
@@ -51,9 +51,9 @@ func testEnum() {
         
         switch informationCellType {
         case .CurrentWheather:
-            break
+            print("Wheather")
         case .InterestingPlacesNearby:
-            break
+            print("Places")
         }
     }
 }
