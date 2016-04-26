@@ -8,52 +8,52 @@
 
 import UIKit
 
-enum InformationEvent: Int {
-    case About
-    case Agenda
+enum GeneralInfo: Int {
+    case Description
+    case HowToGoHere
+    case Hotel
 }
 
-enum InformationVenue: Int {
-    case Navigate
-    case Wifi
+enum MoreInfo: Int {
+    case CurrentWheather
+    case InterestingPlacesNearby
 }
 
-enum InformationTabOLD {
-    case Venue
-    case Event
-    case Documents
+enum PlaceInformation: Int {
+    case General
+    case More
 }
 
-//Old switch
-var selectedInformationTab: InformationTabOLD = .Event
-var section = 1
+let selectedTabIndex = 0
+let tableSection = 0
+let selectedInformationTab: PlaceInformation = PlaceInformation(rawValue: selectedTabIndex)!
 
 func testEnum() {
     switch selectedInformationTab {
-    case .Event:
-        guard let informationCellType = InformationEvent(rawValue: section) else {
+    case .General:
+        guard let informationCellType = GeneralInfo(rawValue: tableSection) else {
             break
         }
         
         switch informationCellType {
-        case .About:
+        case .Description:
             break
-        case .Agenda:
+        case .HowToGoHere:
+            break
+        case .Hotel:
             break
         }
         
-    case .Venue:
-        guard let informationCellType = InformationVenue(rawValue: section) else {
+    case .More:
+        guard let informationCellType = MoreInfo(rawValue: tableSection) else {
             break
         }
         
         switch informationCellType {
-        case .Wifi:
+        case .CurrentWheather:
             break
-        case .Navigate:
+        case .InterestingPlacesNearby:
             break
         }
-    case .Documents:
-        break
     }
 }
