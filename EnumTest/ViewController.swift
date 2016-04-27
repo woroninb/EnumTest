@@ -9,51 +9,41 @@
 import UIKit
 
 
-enum PlaceInformationRefactorOne {
+enum PlaceInformationRefactorTwo {
 
-    enum PlaceInformation: Int {
-        case General
-        case More
-    }
+    case General, More
 
-    enum PlaceHeader {
+    enum PlaceHeader: Int {
         case Description, HowToGoHere, Hotel, CurrentWheather, InterestingPlacesNearby
         static let allGeneralHeaders = [Description, HowToGoHere, Hotel]
         static let allMoreHeraders = [CurrentWheather, InterestingPlacesNearby]
     }
 
-    case Header(selectedTab: PlaceInformation, section: Int)
-    var value: PlaceHeader {
+    var placeValues: [PlaceHeader] {
         switch self {
-        case .Header(let tab, let sectionIndex):
-            if(tab == .General) {
-                return PlaceHeader.allGeneralHeaders[sectionIndex]
-            } else {
-                return PlaceHeader.allMoreHeraders[sectionIndex]
-            }
+        case .General:
+            return PlaceHeader.allGeneralHeaders
+        case .More:
+            return PlaceHeader.allMoreHeraders
         }
     }
 }
 
-let selectedTabIndex = 0
-let tableSection = 0
-let selectedInformationTab: PlaceInformationRefactorOne = PlaceInformationRefactorOne.Header(selectedTab: PlaceInformationRefactorOne.PlaceInformation(rawValue: selectedTabIndex)!, section: tableSection)
-let header = selectedInformationTab.value
+let selectedInformationTabFour: PlaceInformationRefactorTwo = .General
+let selectedTabIndex = 1
+let value = selectedInformationTabFour.placeValues[selectedTabIndex]
 
 func testEnum() {
-    let selectedInformationTab: PlaceInformationRefactorOne = PlaceInformationRefactorOne.Header(selectedTab: PlaceInformationRefactorOne.PlaceInformation(rawValue: selectedTabIndex)!, section: tableSection)
-    let header = selectedInformationTab.value
-
-    switch header {
-    case PlaceInformationRefactorOne.PlaceHeader.Description:
-        print("desription")
-    case PlaceInformationRefactorOne.PlaceHeader.HowToGoHere:
-        print("How to go here")
-    case PlaceInformationRefactorOne.PlaceHeader.Hotel:
+    switch value {
+    case .Description:
+        print("description")
+    case .HowToGoHere:
+        print("HowToGoHere")
+    case .Hotel:
         print("Hotel")
-    case PlaceInformationRefactorOne.PlaceHeader.CurrentWheather:
-        print("Wheather")
-    case PlaceInformationRefactorOne.PlaceHeader.InterestingPlacesNearby:
-        print("Places")
+    case .CurrentWheather:
+        print("CurrentWheather")
+    case .InterestingPlacesNearby:
+        print("InterestingPlacesNearby")
     }
 }
