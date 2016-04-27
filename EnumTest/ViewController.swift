@@ -8,52 +8,52 @@
 
 import UIKit
 
-enum GeneralInfo: Int {
-    case Description
-    case HowToGoHere
-    case Hotel
-}
 
-enum MoreInfo: Int {
-    case CurrentWheather
-    case InterestingPlacesNearby
-}
+enum PlaceInformationRefactorOne {
 
-enum PlaceInformation: Int {
-    case General
-    case More
+    enum PlaceInformation: Int {
+        case General
+        case More
+    }
+
+    enum PlaceHeader {
+        case Description, HowToGoHere, Hotel, CurrentWheather, InterestingPlacesNearby
+        static let allGeneralHeaders = [Description, HowToGoHere, Hotel]
+        static let allMoreHeraders = [CurrentWheather, InterestingPlacesNearby]
+    }
+
+    case Header(selectedTab: PlaceInformation, section: Int)
+    var value: PlaceHeader {
+        switch self {
+        case .Header(let tab, let sectionIndex):
+            if(tab == .General) {
+                return PlaceHeader.allGeneralHeaders[sectionIndex]
+            } else {
+                return PlaceHeader.allMoreHeraders[sectionIndex]
+            }
+        }
+    }
 }
 
 let selectedTabIndex = 0
 let tableSection = 0
-let selectedInformationTab: PlaceInformation = PlaceInformation(rawValue: selectedTabIndex)!
+let selectedInformationTab: PlaceInformationRefactorOne = PlaceInformationRefactorOne.Header(selectedTab: PlaceInformationRefactorOne.PlaceInformation(rawValue: selectedTabIndex)!, section: tableSection)
+let header = selectedInformationTab.value
 
 func testEnum() {
-    switch selectedInformationTab {
-    case .General:
-        guard let informationCellType = GeneralInfo(rawValue: tableSection) else {
-            break
-        }
-        
-        switch informationCellType {
-        case .Description:
-            print("desription")
-        case .HowToGoHere:
-            print("How to go here")
-        case .Hotel:
-            print("Hotel")
-        }
-        
-    case .More:
-        guard let informationCellType = MoreInfo(rawValue: tableSection) else {
-            break
-        }
-        
-        switch informationCellType {
-        case .CurrentWheather:
-            print("Wheather")
-        case .InterestingPlacesNearby:
-            print("Places")
-        }
+    let selectedInformationTab: PlaceInformationRefactorOne = PlaceInformationRefactorOne.Header(selectedTab: PlaceInformationRefactorOne.PlaceInformation(rawValue: selectedTabIndex)!, section: tableSection)
+    let header = selectedInformationTab.value
+
+    switch header {
+    case PlaceInformationRefactorOne.PlaceHeader.Description:
+        print("desription")
+    case PlaceInformationRefactorOne.PlaceHeader.HowToGoHere:
+        print("How to go here")
+    case PlaceInformationRefactorOne.PlaceHeader.Hotel:
+        print("Hotel")
+    case PlaceInformationRefactorOne.PlaceHeader.CurrentWheather:
+        print("Wheather")
+    case PlaceInformationRefactorOne.PlaceHeader.InterestingPlacesNearby:
+        print("Places")
     }
 }
