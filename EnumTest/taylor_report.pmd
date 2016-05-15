@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<pmd>
+    <file name="/Users/woroninb/Documents/Moje/private/blog/Posts/enum/EnumTest/EnumTest/ViewController.swift">
+        <violation beginline="32" endline="60" rule="ExcessiveMethodLength" method="testEnum()" value="25" externalInfoUrl="http://phpmd.org/rules/codesize.html#excessivemethodlength" priority="3">Method 'testEnum()' has to many lines: 25. The configured number of lines in method is 20</violation>
+        <violation beginline="32" endline="60" rule="CyclomaticComplexity" method="testEnum()" value="8" externalInfoUrl="http://phpmd.org/rules/codesize.html#cyclomaticcomplexity" priority="2">The method 'testEnum()' has a Cyclomatic Complexity of 8. The configured cyclomatic complexity is 5</violation>
+        <violation beginline="32" endline="60" rule="NestedBlockDepth" method="testEnum()" value="4" externalInfoUrl="http://docs.oclint.org/en/dev/rules/size.html#nestedblockdepth" priority="3">Method 'testEnum()' has a block depth of 4. The configured block depth is 3</violation>
+    </file>
+</pmd>

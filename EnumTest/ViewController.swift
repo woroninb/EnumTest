@@ -8,42 +8,66 @@
 
 import UIKit
 
+enum PlaceInformation: Int { // Used on UISegment Control
+    case General
+    case More
+}
 
-enum PlaceInformationRefactorTwo {
+enum GeneralInfo: Int {//Cells for General Info Segment (Tab)
+    case Description
+    case HowToGoHere
+    case Hotel
+}
 
-    case General, More
+enum MoreInfo: Int {//Cells for More Info Segment (Tab)
+    case CurrentWheather
+    case InterestingPlacesNearby
+}
 
-    enum PlaceHeader: Int {
-        case Description, HowToGoHere, Hotel, CurrentWheather, InterestingPlacesNearby
-        static let allGeneralHeaders = [Description, HowToGoHere, Hotel]
-        static let allMoreHeraders = [CurrentWheather, InterestingPlacesNearby]
+class PlaceInformationViewController: UIViewController, UITableViewDataSource {
+    
+    var tableView: UITableView?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView = UITableView()
     }
 
-    var placeValues: [PlaceHeader] {
-        switch self {
+    let selectedTabIndex = 0 //selected segment on UISegmentedControl
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        let cell = UITableViewCell()
+        let section = indexPath.section
+        let selectedInformationTab: PlaceInformation = PlaceInformation(rawValue: selectedTabIndex)!
+        
+        switch selectedInformationTab {
         case .General:
-            return PlaceHeader.allGeneralHeaders
+            guard let informationCellType = GeneralInfo(rawValue: section) else { break }
+            switch informationCellType {
+            case .Description:
+                print("Setup Description Cell")
+            case .HowToGoHere:
+                print("Setup HowToGoHere Cell")
+            case .Hotel:
+                print("Setup Hotel Cell")
+            }
+            
         case .More:
-            return PlaceHeader.allMoreHeraders
+            guard let informationCellType = MoreInfo(rawValue: section) else {  break }
+            
+            switch informationCellType {
+            case .CurrentWheather:
+                print("Setup Wheather Cell")
+            case .InterestingPlacesNearby:
+                print("Setup InterestingPlacesNearby Cell")
+            }
         }
+        return cell
+    }
+
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
 }
 
-let selectedInformationTabFour: PlaceInformationRefactorTwo = .General
-let selectedTabIndex = 1
-let value = selectedInformationTabFour.placeValues[selectedTabIndex]
-
-func testEnum() {
-    switch value {
-    case .Description:
-        print("description")
-    case .HowToGoHere:
-        print("HowToGoHere")
-    case .Hotel:
-        print("Hotel")
-    case .CurrentWheather:
-        print("CurrentWheather")
-    case .InterestingPlacesNearby:
-        print("InterestingPlacesNearby")
-    }
-}
