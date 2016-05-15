@@ -1,16 +1,14 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
-- "PlaceInformationCellModel"
+- "PlaceInformation"
 - "PlaceInformationViewController"
 provides-nominal:
-- "O8EnumTest25PlaceInformationCellModel"
-- "OO8EnumTest25PlaceInformationCellModel16PlaceInformation"
-- "OO8EnumTest25PlaceInformationCellModel11PlaceHeader"
+- "O8EnumTest16PlaceInformation"
+- "OO8EnumTest16PlaceInformation11PlaceHeader"
 - "C8EnumTest30PlaceInformationViewController"
 provides-member:
-- ["O8EnumTest25PlaceInformationCellModel", ""]
-- ["OO8EnumTest25PlaceInformationCellModel16PlaceInformation", ""]
-- ["OO8EnumTest25PlaceInformationCellModel11PlaceHeader", ""]
+- ["O8EnumTest16PlaceInformation", ""]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", ""]
 - ["C8EnumTest30PlaceInformationViewController", ""]
 provides-dynamic-lookup:
 - "viewDidLoad"
@@ -18,27 +16,25 @@ provides-dynamic-lookup:
 - "tableView"
 - "tableView"
 depends-top-level:
-- !private "StringLiteralType"
-- "UITableView"
-- !private "~="
-- "=="
-- "Int"
-- "Array"
-- "PlaceInformationViewController"
-- "UITableViewCell"
-- "NSIndexPath"
-- "UITableViewDataSource"
 - !private "print"
+- "UITableViewCell"
+- "Array"
+- "PlaceInformation"
+- "UITableView"
+- "UITableViewDataSource"
+- !private "StringLiteralType"
+- "Int"
+- "NSIndexPath"
 - "UIViewController"
-- "PlaceInformationCellModel"
+- "=="
+- !private "~="
+- "PlaceInformationViewController"
 depends-member:
-- !private ["Ps9AnyObject", "PlaceInformationCellModel"]
 - !private ["Ps9AnyObject", "UITableView"]
 - !private ["Ps9AnyObject", "UITableViewCell"]
 - ["Ps9AnyObject", "init"]
 - ["Ps9AnyObject", "numberOfSectionsInTableView"]
 - !private ["Ps9AnyObject", "print"]
-- !private ["Ps9AnyObject", "section"]
 - ["Ps9AnyObject", "sectionIndexTitlesForTableView"]
 - ["Ps9AnyObject", "tableView"]
 - ["Ps9AnyObject", "viewDidLoad"]
@@ -65,14 +61,12 @@ depends-member:
 - !private ["Ps11BooleanType", "_getBuiltinLogicValue"]
 - !private ["Ps11CVarArgType", "Distance"]
 - !private ["Ps11CVarArgType", "IntegerLiteralType"]
-- !private ["Ps11CVarArgType", "PlaceInformationCellModel"]
 - !private ["Ps11CVarArgType", "UITableView"]
 - !private ["Ps11CVarArgType", "UITableViewCell"]
 - !private ["Ps11CVarArgType", "hashValue"]
 - ["Ps11CVarArgType", "init"]
 - ["Ps11CVarArgType", "numberOfSectionsInTableView"]
 - !private ["Ps11CVarArgType", "print"]
-- !private ["Ps11CVarArgType", "section"]
 - ["Ps11CVarArgType", "sectionIndexTitlesForTableView"]
 - ["Ps11CVarArgType", "tableView"]
 - ["Ps11CVarArgType", "viewDidLoad"]
@@ -89,14 +83,12 @@ depends-member:
 - ["Ps28CustomDebugStringConvertible", "Element"]
 - !private ["Ps28CustomDebugStringConvertible", "Generator"]
 - !private ["Ps28CustomDebugStringConvertible", "Index"]
-- !private ["Ps28CustomDebugStringConvertible", "PlaceInformationCellModel"]
 - !private ["Ps28CustomDebugStringConvertible", "SubSequence"]
 - !private ["Ps28CustomDebugStringConvertible", "UITableView"]
 - !private ["Ps28CustomDebugStringConvertible", "UITableViewCell"]
 - ["Ps28CustomDebugStringConvertible", "init"]
 - ["Ps28CustomDebugStringConvertible", "numberOfSectionsInTableView"]
 - !private ["Ps28CustomDebugStringConvertible", "print"]
-- !private ["Ps28CustomDebugStringConvertible", "section"]
 - ["Ps28CustomDebugStringConvertible", "sectionIndexTitlesForTableView"]
 - !private ["Ps28CustomDebugStringConvertible", "subscript"]
 - ["Ps28CustomDebugStringConvertible", "tableView"]
@@ -107,7 +99,6 @@ depends-member:
 - !private ["Ps23CustomStringConvertible", "Generator"]
 - !private ["Ps23CustomStringConvertible", "Index"]
 - !private ["Ps23CustomStringConvertible", "IntegerLiteralType"]
-- !private ["Ps23CustomStringConvertible", "PlaceInformationCellModel"]
 - !private ["Ps23CustomStringConvertible", "SubSequence"]
 - !private ["Ps23CustomStringConvertible", "UITableView"]
 - !private ["Ps23CustomStringConvertible", "UITableViewCell"]
@@ -116,7 +107,6 @@ depends-member:
 - ["Ps23CustomStringConvertible", "init"]
 - ["Ps23CustomStringConvertible", "numberOfSectionsInTableView"]
 - !private ["Ps23CustomStringConvertible", "print"]
-- !private ["Ps23CustomStringConvertible", "section"]
 - ["Ps23CustomStringConvertible", "sectionIndexTitlesForTableView"]
 - !private ["Ps23CustomStringConvertible", "subscript"]
 - ["Ps23CustomStringConvertible", "tableView"]
@@ -132,7 +122,7 @@ depends-member:
 - !private ["Ps9Equatable", "IntegerLiteralType"]
 - ["Ps9Equatable", "InterestingPlacesNearby"]
 - ["Ps9Equatable", "More"]
-- !private ["Ps9Equatable", "PlaceInformationCellModel"]
+- !private ["Ps9Equatable", "PlaceHeader"]
 - ["Ps9Equatable", "RawValue"]
 - !private ["Ps9Equatable", "UITableView"]
 - !private ["Ps9Equatable", "UITableViewCell"]
@@ -142,9 +132,9 @@ depends-member:
 - ["Ps9Equatable", "hashValue"]
 - ["Ps9Equatable", "init"]
 - ["Ps9Equatable", "numberOfSectionsInTableView"]
+- !private ["Ps9Equatable", "placeValues"]
 - !private ["Ps9Equatable", "print"]
 - ["Ps9Equatable", "rawValue"]
-- !private ["Ps9Equatable", "section"]
 - ["Ps9Equatable", "sectionIndexTitlesForTableView"]
 - ["Ps9Equatable", "tableView"]
 - ["Ps9Equatable", "viewDidLoad"]
@@ -162,7 +152,7 @@ depends-member:
 - !private ["Ps8Hashable", "IntegerLiteralType"]
 - ["Ps8Hashable", "InterestingPlacesNearby"]
 - ["Ps8Hashable", "More"]
-- !private ["Ps8Hashable", "PlaceInformationCellModel"]
+- !private ["Ps8Hashable", "PlaceHeader"]
 - ["Ps8Hashable", "RawValue"]
 - !private ["Ps8Hashable", "UITableView"]
 - !private ["Ps8Hashable", "UITableViewCell"]
@@ -172,9 +162,9 @@ depends-member:
 - ["Ps8Hashable", "hashValue"]
 - ["Ps8Hashable", "init"]
 - ["Ps8Hashable", "numberOfSectionsInTableView"]
+- !private ["Ps8Hashable", "placeValues"]
 - !private ["Ps8Hashable", "print"]
 - ["Ps8Hashable", "rawValue"]
-- !private ["Ps8Hashable", "section"]
 - ["Ps8Hashable", "sectionIndexTitlesForTableView"]
 - ["Ps8Hashable", "tableView"]
 - ["Ps8Hashable", "viewDidLoad"]
@@ -217,19 +207,15 @@ depends-member:
 - !private ["Ps16MutableSliceable", "Index"]
 - !private ["Ps16MutableSliceable", "SubSequence"]
 - !private ["Ps16MutableSliceable", "subscript"]
-- !private ["PSo8NSCoding", "PlaceInformationCellModel"]
 - !private ["PSo8NSCoding", "UITableView"]
 - !private ["PSo8NSCoding", "UITableViewCell"]
 - ["PSo8NSCoding", "init"]
 - ["PSo8NSCoding", "numberOfSectionsInTableView"]
 - !private ["PSo8NSCoding", "print"]
-- !private ["PSo8NSCoding", "section"]
 - ["PSo8NSCoding", "sectionIndexTitlesForTableView"]
 - ["PSo8NSCoding", "tableView"]
 - ["PSo8NSCoding", "viewDidLoad"]
 - ["PSo8NSCoding", ""]
-- !private ["PSo9NSCopying", "section"]
-- !private ["PSo26NSExtensionRequestHandling", "PlaceInformationCellModel"]
 - !private ["PSo26NSExtensionRequestHandling", "UITableView"]
 - !private ["PSo26NSExtensionRequestHandling", "UITableViewCell"]
 - ["PSo26NSExtensionRequestHandling", "init"]
@@ -239,58 +225,51 @@ depends-member:
 - ["PSo26NSExtensionRequestHandling", "tableView"]
 - ["PSo26NSExtensionRequestHandling", "viewDidLoad"]
 - ["PSo26NSExtensionRequestHandling", ""]
-- !private ["CSo11NSIndexPath", "section"]
 - !private ["CSo8NSNumber", "deinit"]
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "NSIndexPath"]
-- !private ["CSo8NSObject", "PlaceInformationCellModel"]
+- !private ["CSo8NSObject", "PlaceInformation"]
 - ["CSo8NSObject", "UITableView"]
 - ["CSo8NSObject", "UITableViewCell"]
 - !private ["CSo8NSObject", "deinit"]
 - ["CSo8NSObject", "init"]
 - ["CSo8NSObject", "numberOfSectionsInTableView"]
 - !private ["CSo8NSObject", "print"]
-- !private ["CSo8NSObject", "section"]
 - ["CSo8NSObject", "sectionIndexTitlesForTableView"]
 - ["CSo8NSObject", "tableView"]
 - ["CSo8NSObject", "viewDidLoad"]
-- !private ["PSo16NSObjectProtocol", "PlaceInformationCellModel"]
 - !private ["PSo16NSObjectProtocol", "UITableView"]
 - !private ["PSo16NSObjectProtocol", "UITableViewCell"]
 - ["PSo16NSObjectProtocol", "init"]
 - ["PSo16NSObjectProtocol", "numberOfSectionsInTableView"]
 - !private ["PSo16NSObjectProtocol", "print"]
-- !private ["PSo16NSObjectProtocol", "section"]
 - ["PSo16NSObjectProtocol", "sectionIndexTitlesForTableView"]
 - ["PSo16NSObjectProtocol", "tableView"]
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
-- !private ["PSo14NSSecureCoding", "section"]
 - !private ["CSo7NSValue", "deinit"]
-- ["OO8EnumTest25PlaceInformationCellModel11PlaceHeader", "CurrentWheather"]
-- ["OO8EnumTest25PlaceInformationCellModel11PlaceHeader", "Description"]
-- ["OO8EnumTest25PlaceInformationCellModel11PlaceHeader", "Hotel"]
-- ["OO8EnumTest25PlaceInformationCellModel11PlaceHeader", "HowToGoHere"]
-- ["OO8EnumTest25PlaceInformationCellModel11PlaceHeader", "InterestingPlacesNearby"]
-- ["OO8EnumTest25PlaceInformationCellModel11PlaceHeader", "allGeneralHeaders"]
-- ["OO8EnumTest25PlaceInformationCellModel11PlaceHeader", "allMoreHeraders"]
-- ["OO8EnumTest25PlaceInformationCellModel11PlaceHeader", "deinit"]
-- ["OO8EnumTest25PlaceInformationCellModel11PlaceHeader", "hashValue"]
-- ["OO8EnumTest25PlaceInformationCellModel16PlaceInformation", "General"]
-- ["OO8EnumTest25PlaceInformationCellModel16PlaceInformation", "More"]
-- ["OO8EnumTest25PlaceInformationCellModel16PlaceInformation", "RawValue"]
-- ["OO8EnumTest25PlaceInformationCellModel16PlaceInformation", "deinit"]
-- ["OO8EnumTest25PlaceInformationCellModel16PlaceInformation", "hashValue"]
-- ["OO8EnumTest25PlaceInformationCellModel16PlaceInformation", "init"]
-- ["OO8EnumTest25PlaceInformationCellModel16PlaceInformation", "rawValue"]
-- ["O8EnumTest25PlaceInformationCellModel", "Header"]
-- ["O8EnumTest25PlaceInformationCellModel", "Int"]
-- ["O8EnumTest25PlaceInformationCellModel", "PlaceHeader"]
-- ["O8EnumTest25PlaceInformationCellModel", "PlaceInformation"]
-- ["O8EnumTest25PlaceInformationCellModel", "value"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "CurrentWheather"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "Description"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "Hotel"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "HowToGoHere"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "InterestingPlacesNearby"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "RawValue"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "allGeneralHeaders"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "allMoreHeraders"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "deinit"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "hashValue"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "init"]
+- ["OO8EnumTest16PlaceInformation11PlaceHeader", "rawValue"]
+- ["O8EnumTest16PlaceInformation", "General"]
+- ["O8EnumTest16PlaceInformation", "Int"]
+- ["O8EnumTest16PlaceInformation", "More"]
+- ["O8EnumTest16PlaceInformation", "PlaceHeader"]
+- ["O8EnumTest16PlaceInformation", "deinit"]
+- ["O8EnumTest16PlaceInformation", "hashValue"]
+- ["O8EnumTest16PlaceInformation", "placeValues"]
 - ["C8EnumTest30PlaceInformationViewController", "Int"]
 - ["C8EnumTest30PlaceInformationViewController", "NSIndexPath"]
-- !private ["C8EnumTest30PlaceInformationViewController", "PlaceInformationCellModel"]
+- !private ["C8EnumTest30PlaceInformationViewController", "PlaceInformation"]
 - ["C8EnumTest30PlaceInformationViewController", "UITableView"]
 - ["C8EnumTest30PlaceInformationViewController", "UITableViewCell"]
 - ["C8EnumTest30PlaceInformationViewController", "deinit"]
@@ -309,9 +288,14 @@ depends-member:
 - !private ["Ps30RangeReplaceableCollectionType", "Index"]
 - !private ["Ps30RangeReplaceableCollectionType", "SubSequence"]
 - !private ["Ps30RangeReplaceableCollectionType", "subscript"]
-- ["Ps16RawRepresentable", "General"]
-- ["Ps16RawRepresentable", "More"]
+- ["Ps16RawRepresentable", "CurrentWheather"]
+- ["Ps16RawRepresentable", "Description"]
+- ["Ps16RawRepresentable", "Hotel"]
+- ["Ps16RawRepresentable", "HowToGoHere"]
+- ["Ps16RawRepresentable", "InterestingPlacesNearby"]
 - ["Ps16RawRepresentable", "RawValue"]
+- !private ["Ps16RawRepresentable", "allGeneralHeaders"]
+- !private ["Ps16RawRepresentable", "allMoreHeraders"]
 - ["Ps16RawRepresentable", "hashValue"]
 - ["Ps16RawRepresentable", "init"]
 - ["Ps16RawRepresentable", "rawValue"]
@@ -337,7 +321,6 @@ depends-member:
 - !private ["Ps10Strideable", "hashValue"]
 - !private ["PSo29UIAccessibilityIdentification", "init"]
 - !private ["PSo12UIAppearance", "init"]
-- !private ["PSo21UIAppearanceContainer", "PlaceInformationCellModel"]
 - !private ["PSo21UIAppearanceContainer", "UITableView"]
 - !private ["PSo21UIAppearanceContainer", "UITableViewCell"]
 - ["PSo21UIAppearanceContainer", "init"]
@@ -347,7 +330,6 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "tableView"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
 - ["PSo21UIAppearanceContainer", ""]
-- !private ["PSo18UIContentContainer", "PlaceInformationCellModel"]
 - !private ["PSo18UIContentContainer", "UITableView"]
 - !private ["PSo18UIContentContainer", "UITableViewCell"]
 - ["PSo18UIContentContainer", "init"]
@@ -359,7 +341,6 @@ depends-member:
 - ["PSo18UIContentContainer", ""]
 - !private ["PSo17UICoordinateSpace", "init"]
 - !private ["PSo13UIDynamicItem", "init"]
-- !private ["PSo18UIFocusEnvironment", "PlaceInformationCellModel"]
 - !private ["PSo18UIFocusEnvironment", "UITableView"]
 - !private ["PSo18UIFocusEnvironment", "UITableViewCell"]
 - ["PSo18UIFocusEnvironment", "init"]
@@ -372,7 +353,7 @@ depends-member:
 - !private ["PSo27UIGestureRecognizerDelegate", "init"]
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "NSIndexPath"]
-- !private ["CSo11UIResponder", "PlaceInformationCellModel"]
+- !private ["CSo11UIResponder", "PlaceInformation"]
 - ["CSo11UIResponder", "UITableView"]
 - ["CSo11UIResponder", "UITableViewCell"]
 - ["CSo11UIResponder", "init"]
@@ -382,7 +363,6 @@ depends-member:
 - ["CSo11UIResponder", "tableView"]
 - ["CSo11UIResponder", "viewDidLoad"]
 - !private ["CSo12UIScrollView", "init"]
-- !private ["PSo16UIStateRestoring", "PlaceInformationCellModel"]
 - !private ["PSo16UIStateRestoring", "UITableView"]
 - !private ["PSo16UIStateRestoring", "UITableViewCell"]
 - ["PSo16UIStateRestoring", "init"]
@@ -394,7 +374,6 @@ depends-member:
 - ["PSo16UIStateRestoring", ""]
 - !private ["CSo11UITableView", "init"]
 - !private ["CSo15UITableViewCell", "init"]
-- !private ["PSo21UITableViewDataSource", "PlaceInformationCellModel"]
 - !private ["PSo21UITableViewDataSource", "UITableView"]
 - !private ["PSo21UITableViewDataSource", "UITableViewCell"]
 - ["PSo21UITableViewDataSource", "numberOfSectionsInTableView"]
@@ -402,7 +381,6 @@ depends-member:
 - ["PSo21UITableViewDataSource", "sectionIndexTitlesForTableView"]
 - ["PSo21UITableViewDataSource", "tableView"]
 - ["PSo21UITableViewDataSource", ""]
-- !private ["PSo18UITraitEnvironment", "PlaceInformationCellModel"]
 - !private ["PSo18UITraitEnvironment", "UITableView"]
 - !private ["PSo18UITraitEnvironment", "UITableViewCell"]
 - ["PSo18UITraitEnvironment", "init"]
@@ -415,7 +393,7 @@ depends-member:
 - !private ["CSo6UIView", "init"]
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "NSIndexPath"]
-- !private ["CSo16UIViewController", "PlaceInformationCellModel"]
+- !private ["CSo16UIViewController", "PlaceInformation"]
 - ["CSo16UIViewController", "UITableView"]
 - ["CSo16UIViewController", "UITableViewCell"]
 - ["CSo16UIViewController", "init"]
@@ -504,17 +482,13 @@ depends-nominal:
 - "Ps16MutableIndexable"
 - "Ps16MutableSliceable"
 - "PSo8NSCoding"
-- !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
-- !private "CSo11NSIndexPath"
 - !private "CSo8NSNumber"
 - "CSo8NSObject"
 - "PSo16NSObjectProtocol"
-- !private "PSo14NSSecureCoding"
 - !private "CSo7NSValue"
-- "OO8EnumTest25PlaceInformationCellModel11PlaceHeader"
-- "OO8EnumTest25PlaceInformationCellModel16PlaceInformation"
-- "O8EnumTest25PlaceInformationCellModel"
+- "OO8EnumTest16PlaceInformation11PlaceHeader"
+- "O8EnumTest16PlaceInformation"
 - "C8EnumTest30PlaceInformationViewController"
 - !private "Ps21RandomAccessIndexType"
 - !private "Vs5Range"
@@ -564,4 +538,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
-interface-hash: "5f2a0f7a4fdb992fe711f9aef0640c69"
+interface-hash: "e4a570e756671d6ffbea4c7d14e934b2"

@@ -8,31 +8,22 @@
 
 import UIKit
 
+enum PlaceInformation {
 
-enum PlaceInformationCellModel {
-    // tableView section depends on selectedTable and tableview section
-    case Header(selectedTab: PlaceInformation, section: Int)
+    case General, More
 
-    enum PlaceInformation: Int { // Used on UISegment Control
-        case General
-        case More
-    }
-
-    enum PlaceHeader {
+    enum PlaceHeader: Int {
         case Description, HowToGoHere, Hotel, CurrentWheather, InterestingPlacesNearby
         static let allGeneralHeaders = [Description, HowToGoHere, Hotel]
         static let allMoreHeraders = [CurrentWheather, InterestingPlacesNearby]
     }
 
-    var value: PlaceHeader {
+    var placeValues: [PlaceHeader] {
         switch self {
-        case .Header(let tab, let sectionIndex):
-            switch tab {
-            case .General:
-                return PlaceHeader.allGeneralHeaders[sectionIndex]
-            case .More:
-                return PlaceHeader.allMoreHeraders[sectionIndex]
-            }
+        case .General:
+            return PlaceHeader.allGeneralHeaders
+        case .More:
+            return PlaceHeader.allMoreHeraders
         }
     }
 }
@@ -48,23 +39,23 @@ class PlaceInformationViewController: UIViewController, UITableViewDataSource {
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 
-        let selectedTabIndex = 1 //selected segment on UISegmentedControl
-        let tableViewSection: PlaceInformationCellModel = PlaceInformationCellModel.Header(selectedTab: PlaceInformationCellModel.PlaceInformation(rawValue: selectedTabIndex)!, section: indexPath.section)
-        let header = tableViewSection.value
+        let selectedInformationTab: PlaceInformation = .General
+        let selectedTabIndex = 1
+        let header = selectedInformationTab.placeValues[selectedTabIndex]
         let cell = UITableViewCell()
 
-            switch header {
-            case PlaceInformationCellModel.PlaceHeader.Description:
-                print("Setup Description Cell")
-            case PlaceInformationCellModel.PlaceHeader.HowToGoHere:
-                print("Setup HowToGoHere Cell")
-            case PlaceInformationCellModel.PlaceHeader.Hotel:
-                print("Setup Hotel Cell")
-            case PlaceInformationCellModel.PlaceHeader.CurrentWheather:
-                print("Setup CurrentWheather Cell")
-            case PlaceInformationCellModel.PlaceHeader.InterestingPlacesNearby:
-                print("Setup InterestingPlacesNearby Cell")
-            }
+        switch header {
+        case .Description:
+             print("Setup Description Cell")
+        case .HowToGoHere:
+            print("Setup HowToGoHere Cell")
+        case .Hotel:
+            print("Setup Hotel Cell")
+        case .CurrentWheather:
+            print("Setup CurrentWheather Cell")
+        case .InterestingPlacesNearby:
+            print("Setup InterestingPlacesNearby Cell")
+        }
         return cell
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

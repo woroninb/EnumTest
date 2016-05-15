@@ -1,6 +1,6 @@
 version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
 options: "a9821b8e30774b26bb8effac86106719"
-build_time: [516588371, 690543000]
+build_time: [516589071, 570398000]
 inputs:
-  "/Users/woroninb/Documents/Moje/private/blog/Posts/enum/EnumTest/EnumTest/ViewController.swift": [516588371, 0]
+  "/Users/woroninb/Documents/Moje/private/blog/Posts/enum/EnumTest/EnumTest/ViewController.swift": [516589071, 0]
   "/Users/woroninb/Documents/Moje/private/blog/Posts/enum/EnumTest/EnumTest/AppDelegate.swift": [514725811, 0]
