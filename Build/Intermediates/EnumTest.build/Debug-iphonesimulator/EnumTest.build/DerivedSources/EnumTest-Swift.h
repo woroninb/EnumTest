@@ -123,7 +123,6 @@ SWIFT_CLASS("_TtC8EnumTest30PlaceInformationViewController")
 @interface PlaceInformationViewController : UIViewController <UITableViewDataSource>
 @property (nonatomic, strong) UITableView * _Nullable tableView;
 - (void)viewDidLoad;
-@property (nonatomic, readonly) NSInteger selectedTabIndex;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
